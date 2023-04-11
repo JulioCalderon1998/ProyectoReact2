@@ -1,4 +1,5 @@
 import {addDoc,collection,doc,getFirestore,updateDoc,} from "firebase/firestore";
+import { useHistory } from "react-router-dom";
 import NavBar from '../components/NavBar'
 import Alert from 'react-bootstrap/Alert';
 import { useContext } from "react";
@@ -50,7 +51,8 @@ import "../styles/cart.css";
              updateOrder(product.id, finalStock);
            });
 
-           window.location.href = `/checkout/${orderId}`
+           const history = useHistory();
+           history.push(`/checkout/${orderId}`);
        })
         .catch((error) => console.log({ error }));
 
