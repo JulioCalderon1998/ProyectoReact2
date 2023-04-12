@@ -4,14 +4,16 @@ import { useEffect, useState } from "react";
 import {collection,getDocs,getFirestore,query,where, documentId} from "firebase/firestore";
 import "../styles/checkout.css";
 import swal from 'sweetalert';
+import React from 'react';
 
 
-function Checkout() {
+function Checkout(props) {
+  const { orderId } = props;
 
     swal("Gracias por tu compra!", "A continuacion te mostramos el resumen de tu compra.", "success");
 
     const params = useParams();
-    const orderNo = params.id;
+    const orderNo = orderId //params.id;
 
 
 

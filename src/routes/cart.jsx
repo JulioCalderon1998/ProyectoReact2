@@ -1,5 +1,4 @@
 import {addDoc,collection,doc,getFirestore,updateDoc,} from "firebase/firestore";
-import { useHistory } from "react-router-dom";
 import NavBar from '../components/NavBar'
 import Alert from 'react-bootstrap/Alert';
 import { useContext } from "react";
@@ -8,8 +7,12 @@ import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
 import "../styles/cart.css";
 
+import React, { useState } from 'react';
+
   
   function Cart() {
+    const [orderId, setOrderId] = useState('');
+
     const { productsAdded, removeItem, clear } = useContext(Context);
 
      const db = getFirestore();
@@ -51,8 +54,7 @@ import "../styles/cart.css";
              updateOrder(product.id, finalStock);
            });
 
-           const history = useHistory();
-           history.push(`/checkout/${orderId}`);
+           setOrderId(orderId);
        })
         .catch((error) => console.log({ error }));
 
@@ -121,6 +123,7 @@ import "../styles/cart.css";
     
     <div className="btn1">
     <Button onClick={sendOrder}>Terminar mi Compra</Button>
+    {orderId && <Checkout orderId={orderId} />}
     </div>
       </div>
       </div>
