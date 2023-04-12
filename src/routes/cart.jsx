@@ -63,7 +63,7 @@ import React, { useState } from 'react';
 
     }
 
-    if (productsAdded.length>0){
+    if (productsAdded.length>0 && !orderId){
   
     return (
       <div>
@@ -125,14 +125,18 @@ import React, { useState } from 'react';
     
     <div className="btn1">
     <Button onClick={sendOrder}>Terminar mi Compra</Button>
-    {orderId && <Checkout orderId={orderId} />}
+    
     </div>
       </div>
       </div>
     );
   }
-
-
+  else if (orderId)
+  {
+    <div>
+    <Checkout orderId={orderId} />
+    </div>
+  }
 else{
   return(
     <div>
