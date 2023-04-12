@@ -7,7 +7,7 @@ import swal from 'sweetalert';
 import React from 'react';
 
 
-function Checkout(props) {
+function Checkout() {
   //const { orderId } = props;
 
     swal("Gracias por tu compra!", "A continuacion te mostramos el resumen de tu compra.", "success");
