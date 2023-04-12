@@ -137,9 +137,7 @@ import React, { useState } from 'react';
   {
     return(
     <div>
-    <Link to="/checkout">
-    <Checkout orderId={orderId} />
-    </Link>
+    <Link to={`/checkout/${orderId}`}></Link>
     </div>
     );
   }

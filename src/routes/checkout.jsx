@@ -8,12 +8,12 @@ import React from 'react';
 
 
 function Checkout(props) {
-  const { orderId } = props;
+  //const { orderId } = props;
 
     swal("Gracias por tu compra!", "A continuacion te mostramos el resumen de tu compra.", "success");
 
-    // const params = useParams();
-    const orderNo = orderId //params.id;
+    params = useParams();
+    const orderNo = params.id; // orderId
 
 
 
