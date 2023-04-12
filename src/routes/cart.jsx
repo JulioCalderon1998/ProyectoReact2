@@ -136,9 +136,7 @@ import React, { useState } from 'react';
   else if (orderId)
   {
     return(
-    <div>
     <Link to={`/checkout/${orderId}`}></Link>
-    </div>
     );
   }
 else{
