@@ -6,6 +6,7 @@ import { Context } from "../context";
 import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
 import "../styles/cart.css";
+import { Link } from "react-router-dom";
 
 import Checkout from './checkout';
 
