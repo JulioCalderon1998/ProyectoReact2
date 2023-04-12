@@ -12,7 +12,7 @@ function Checkout(props) {
 
     swal("Gracias por tu compra!", "A continuacion te mostramos el resumen de tu compra.", "success");
 
-    const params = useParams();
+    // const params = useParams();
     const orderNo = orderId //params.id;
 
 
