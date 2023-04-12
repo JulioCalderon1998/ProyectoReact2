@@ -146,7 +146,7 @@ import React, { useState } from 'react';
         A continuacion te mostramos el resumen de tu compra.
         </Card.Text>
         <Link to={`/checkout/${orderId}`}>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">IR AL RESUMEN</Button>
         </Link>
       </Card.Body>
     </Card>
