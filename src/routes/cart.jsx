@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
 import "../styles/cart.css";
 import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
 
 import Checkout from './checkout';
 
@@ -136,7 +137,20 @@ import React, { useState } from 'react';
   else if (orderId)
   {
     return(
-    <Link to={`/checkout/${orderId}`}></Link>
+
+    <Card>
+      <Card.Header>Confirmacion de compra</Card.Header>
+      <Card.Body>
+        <Card.Title>Gracias por tu compra!</Card.Title>
+        <Card.Text>
+        A continuacion te mostramos el resumen de tu compra.
+        </Card.Text>
+        <Link to={`/checkout/${orderId}`}>
+        <Button variant="primary">Go somewhere</Button>
+        </Link>
+      </Card.Body>
+    </Card>
+
     );
   }
 else{
