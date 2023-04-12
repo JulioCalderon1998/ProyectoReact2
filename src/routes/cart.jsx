@@ -7,6 +7,8 @@ import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
 import "../styles/cart.css";
 
+import Checkout from './checkout';
+
 import React, { useState } from 'react';
 
   
