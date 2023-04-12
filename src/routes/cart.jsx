@@ -57,6 +57,7 @@ import React, { useState } from 'react';
            });
 
            setOrderId(orderId);
+           clear();
        })
         .catch((error) => console.log({ error }));
 
