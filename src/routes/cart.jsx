@@ -6,7 +6,7 @@ import { Context } from "../context";
 import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
 import "../styles/cart.css";
-import { Link } from "react-router-dom";
+import { Redirect } from 'react-router-dom';
 
 import Checkout from './checkout';
 
@@ -137,7 +137,7 @@ import React, { useState } from 'react';
   {
     return(
     <div>
-    <Link to={`/checkout/${orderId}`}></Link>
+    <Redirect to={`/checkout/${orderId}`}></Redirect>
     </div>
     );
   }
